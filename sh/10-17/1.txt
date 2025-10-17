@@ -1,0 +1,197 @@
+电商商品主题宏观监控看板 V1.1
+建设手册（含操作原理与流程）
+版本：V1.1
+日期：2025-10-17
+
+一、项目目标
+表格
+复制
+维度	目标值
+业务	实时监控店铺商品访问、收藏、加购、销售及转化率，支持价格带/区间分析
+技术	ODS → DWD → DWS → ADS 四层建模，MaxCompute + SQL 全链路
+数据	T+1 离线（ds=20251016），可扩展为小时级
+指标	≥15 个核心指标，含支付转化率、价格带分布、件数/金额区间
+
+二、整体架构
+2.1 数据流向图
+Text
+复制
+ODS（原始） → DWD（明细） → DWS（汇总） → ADS（应用）
+2.2 表清单
+表格
+复制
+层级	表名	用途	分区
+ODS	realtime_v1_ods_*	原始收藏、加购、订单、SKU 信息	ds
+DWD	dwd_favor_log	收藏明细	ds
+DWD	dwd_cart_log	加购明细	ds
+DWD	dwd_order_detail	支付明细	ds
+DWS	dws_product_hour	商品小时级汇总	ds
+DWS	dws_view_hour	商品小时访问汇总	ds
+ADS	ads_product_monitor	宏观监控看板主表	ds
+ADS	ads_price_band	价格带分析	ds
+ADS	ads_order_interval	件数/金额区间分析	ds
+
+三、操作原理与流程（Step by Step）
+3.1 准备阶段
+1.
+确认分区：所有表均为 ds='20251016'
+2.
+3.
+确认字段类型：user_id 在收藏表为 BIGINT，加购表为 STRING → 统一 CAST
+4.
+5.
+确认价格带：
+P1: 0-50, P2: 51-100, P3: 101-200, P4: 201-500, P5: 501+
+6.
+
+3.2 ODS → DWD（明细清洗）
+3.2.1 收藏明细
+sql
+复制
+CREATE TABLE dwd_favor_log (
+  user_id BIGINT,
+  sku_id BIGINT,
+  spu_id BIGINT,
+  favor_time STRING) PARTITIONED BY (ds STRING);
+INSERT OVERWRITE TABLE dwd_favor_log PARTITION (ds='20251016')SELECT user_id, sku_id, spu_id, create_timeFROM realtime_v1_ods_favor_infoWHERE ds='20251016' AND is_cancel='0';
+3.2.2 加购明细
+sql
+复制
+CREATE TABLE dwd_cart_log (
+  user_id STRING,
+  sku_id BIGINT,
+  sku_num BIGINT,
+  cart_time STRING) PARTITIONED BY (ds STRING);
+INSERT OVERWRITE TABLE dwd_cart_log PARTITION (ds='20251016')SELECT user_id, sku_id, sku_num, create_timeFROM realtime_v1_ods_cart_infoWHERE ds='20251016';
+3.2.3 支付明细
+sql
+复制
+CREATE TABLE dwd_order_detail (
+  order_id BIGINT,
+  user_id BIGINT,
+  sku_id BIGINT,
+  sku_num BIGINT,
+  order_price DECIMAL(38,18),
+  pay_amount DECIMAL(38,18),
+  order_time STRING) PARTITIONED BY (ds STRING);
+INSERT OVERWRITE TABLE dwd_order_detail PARTITION (ds='20251016')SELECT d.order_id, o.user_id, d.sku_id,
+       CAST(d.sku_num AS BIGINT), d.order_price, d.split_total_amount, o.create_timeFROM realtime_v1_ods_order_detail dJOIN realtime_v1_ods_order_info o
+  ON d.order_id = o.idWHERE d.ds='20251016' AND o.ds='20251016' AND o.order_status='1001';
+
+3.3 缺失访问日志 → 模拟生成
+原理：收藏/加购/支付即视为“访问”
+去重：按 user_id + sku_id 取最早行为时间
+sql
+复制
+CREATE TABLE ods_logs (
+  user_id BIGINT,
+  sku_id BIGINT,
+  view_time STRING,
+  pv BIGINT) PARTITIONED BY (ds STRING);
+INSERT OVERWRITE TABLE ods_logs PARTITION (ds='20251016')SELECT CAST(user_id AS BIGINT), sku_id,
+       COALESCE(favor_time, cart_time, order_time), 1FROM (
+  SELECT user_id, sku_id, favor_time, NULL, NULL FROM dwd_favor_log
+  UNION ALL
+  SELECT user_id, sku_id, NULL, cart_time, NULL FROM dwd_cart_log
+  UNION ALL
+  SELECT user_id, sku_id, NULL, NULL, order_time FROM dwd_order_detail) tGROUP BY user_id, sku_id, COALESCE(favor_time, cart_time, order_time);
+
+3.4 DWS → 商品小时级汇总
+3.4.1 收藏/加购/支付汇总
+sql
+复制
+CREATE TABLE dws_product_hour (...) PARTITIONED BY (ds STRING);-- 逻辑：UNION ALL + GROUP BY sku_id, hour_dt-- 详见完整 SQL（已验证 46 条）
+3.4.2 访问汇总
+sql
+复制
+CREATE TABLE dws_view_hour (...) PARTITIONED BY (ds STRING);-- 结果：35 条商品小时级访问数据
+
+3.5 ADS → 宏观监控看板
+3.5.1 主表：含转化率
+sql
+复制
+CREATE TABLE ads_product_monitor (
+  sku_id, spu_id, hour_dt,
+  favor_uc, cart_uc, cart_num,
+  pay_uc, pay_num, pay_amt,
+  view_uc, view_pv, pay_rate DECIMAL(38,4)) PARTITIONED BY (ds STRING);
+-- pay_rate = pay_uc / view_uc
+3.5.2 价格带分析
+sql
+复制
+CREATE TABLE ads_price_band (...) PARTITIONED BY (ds STRING);-- 结果示例：-- P1_0-50  0  0  4-- P5_501+  25  126684  23
+3.5.3 件数/金额区间
+sql
+复制
+CREATE TABLE ads_order_interval (...) PARTITIONED BY (ds STRING);-- interval_type = 'pay_num' / 'pay_amt'-- 结果：6 条区间分布
+
+四、核心结果快照（ds=20251016）
+4.1 商品小时级（46 条）
+
+转化率最高 20%
+
+
+访客 35 人，支付 27 件，金额 127,353 元
+
+4.2 价格带
+表格
+复制
+价格带	件数	金额	SKU数	金额占比
+P5_501+	25	126,684	23	99.4%
+4.3 区间分布
+
+0-99 元：36 笔，69 元
+
+
+600 元及以上：10 笔，127,284 元（高价值单）
+
+
+五、Word 使用提示
+1.
+标题样式：
+2.
+
+标题 1 → 一级标题（如“一、项目目标”）
+
+
+标题 2 → 二级标题（如“3.2 ODS → DWD”）
+
+
+标题 3 → 三级标题（如“3.2.1 收藏明细”）
+
+3.
+插入截图位置：
+4.
+
+每个 INSERT 语句后留空一行，截图贴结果（如 46 条、35 条、6 条）
+
+5.
+页眉页脚：
+6.
+
+页眉：电商商品主题宏观监控看板 V1.1
+
+
+页脚：第 X 页，共 Y 页（Word 自动）
+
+7.
+目录：
+8.
+
+引用 → 目录 → 自动目录（基于标题 1-3）
+
+9.
+导出 PDF：
+10.
+
+文件 → 导出 → 创建 PDF/XPS
+
+
+六、后续可扩展
+表格
+复制
+扩展点	说明
+实时化	接入 Kafka → Flink → Holo，分钟级更新
+品类/品牌维度	增加 category_id、brand_id
+预警	转化率 < 5% 或高价段金额下降 > 20% 自动钉钉
+可视化
