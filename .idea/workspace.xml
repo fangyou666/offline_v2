@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4906e2a6-0cb3-4bb9-a938-a133633a33b1" name="更改" comment="add init">
+      <change afterPath="$PROJECT_DIR$/sh/10-22/111f20f2-4596-4516-91c0-b607563d5317.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sh/10-22/2cb0b307-dfbb-468d-abb0-81fae2b06f7d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sh/10-22/74dec854-6bcc-4ac6-bb73-9e059914d295.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sh/10-22/a56b5045-e7ad-4f73-833c-f9e24fd3d5b9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sh/10-22/a9b15ada-bd95-494e-88b1-8c822e205130.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,29 +42,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Notification.DisplayName-DoNotAsk-Plugin Error&quot;: &quot;插件加载失败&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-WindowsDefender&quot;: &quot;Microsoft Defender 配置&quot;,
-    &quot;Notification.DoNotAsk-Plugin Error&quot;: &quot;true&quot;,
-    &quot;Notification.DoNotAsk-WindowsDefender&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/专高六/IDEAFIle/offline_v2/sh/10-20&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Notification.DisplayName-DoNotAsk-Plugin Error": "插件加载失败",
+    "Notification.DisplayName-DoNotAsk-WindowsDefender": "Microsoft Defender 配置",
+    "Notification.DoNotAsk-Plugin Error": "true",
+    "Notification.DoNotAsk-WindowsDefender": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "corretto-18",
+    "last_opened_file_path": "C:/专高六/IDEAFIle/offline_v2/sh/10-22",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\专高六\IDEAFIle\offline_v2\sh\10-20" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\专高六\IDEAFIle\offline_v2\sh\10-17" />
       <recent name="C:\专高六\IDEAFIle\offline_v2\sh\StreamPark" />
       <recent name="C:\专高六\IDEAFIle\offline_v2\sh" />
       <recent name="C:\专高六\IDEAFIle\offline_v2\offline_sql" />
@@ -106,6 +112,8 @@
       <workItem from="1760711636207" duration="1394000" />
       <workItem from="1760966703934" duration="561000" />
       <workItem from="1761028697520" duration="640000" />
+      <workItem from="1761058400434" duration="183000" />
+      <workItem from="1761142710143" duration="240000" />
     </task>
     <task id="LOCAL-00001" summary="add init">
       <option name="closed" value="true" />
@@ -155,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760967021964</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add init">
+      <option name="closed" value="true" />
+      <created>1761058571373</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1761058571373</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
