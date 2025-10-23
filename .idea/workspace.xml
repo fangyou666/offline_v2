@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4906e2a6-0cb3-4bb9-a938-a133633a33b1" name="更改" comment="add init">
-      <change afterPath="$PROJECT_DIR$/sh/10-22/111f20f2-4596-4516-91c0-b607563d5317.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sh/10-22/2cb0b307-dfbb-468d-abb0-81fae2b06f7d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sh/10-22/74dec854-6bcc-4ac6-bb73-9e059914d295.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sh/10-22/a56b5045-e7ad-4f73-833c-f9e24fd3d5b9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sh/10-22/a9b15ada-bd95-494e-88b1-8c822e205130.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/lx1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/spider_chinazy_pocf1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider_chinazy_pocf2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/utils/ChromeDebugControllerUtils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/utils/public_func.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream/1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -42,52 +50,183 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Notification.DisplayName-DoNotAsk-Plugin Error": "插件加载失败",
-    "Notification.DisplayName-DoNotAsk-WindowsDefender": "Microsoft Defender 配置",
-    "Notification.DoNotAsk-Plugin Error": "true",
-    "Notification.DoNotAsk-WindowsDefender": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "corretto-18",
-    "last_opened_file_path": "C:/专高六/IDEAFIle/offline_v2/sh/10-22",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Notification.DisplayName-DoNotAsk-Plugin Error&quot;: &quot;插件加载失败&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-WindowsDefender&quot;: &quot;Microsoft Defender 配置&quot;,
+    &quot;Notification.DoNotAsk-Plugin Error&quot;: &quot;true&quot;,
+    &quot;Notification.DoNotAsk-WindowsDefender&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/专高六/IDEAFIle/offline_v2/stream-bda-data-dev&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\专高六\IDEAFIle\offline_v2\stream-bda-data-dev" />
+      <recent name="C:\专高六\IDEAFIle\offline_v2\sh\10-22" />
       <recent name="C:\专高六\IDEAFIle\offline_v2\sh\10-20" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\专高六\IDEAFIle\offline_v2\sh\10-17" />
-      <recent name="C:\专高六\IDEAFIle\offline_v2\sh\StreamPark" />
-      <recent name="C:\专高六\IDEAFIle\offline_v2\sh" />
-      <recent name="C:\专高六\IDEAFIle\offline_v2\offline_sql" />
+      <recent name="C:\专高六\IDEAFIle\offline_v2\stream-bda-data-dev" />
+      <recent name="C:\专高六\IDEAFIle\offline_v2\stream-bda-data-dev\spider\chinazy_policy_file" />
+      <recent name="C:\专高六\IDEAFIle\offline_v2\stream-bda-data-dev\utils" />
+      <recent name="C:\专高六\IDEAFIle\offline_v2\sh\10-22" />
+      <recent name="C:\专高六\IDEAFIle\offline_v2\sh\10-20" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="SocketTextStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.v3.SocketTextStream" />
-      <module name="stream-common" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.v3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Python.spider_chinazy_pocf2 (1)">
+    <configuration name="ChromeDebugControllerUtils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="offline_v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stream-bda-data-dev/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stream-bda-data-dev/utils/ChromeDebugControllerUtils.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lx1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="offline_v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/lx1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spider_chinazy_pocf1 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="offline_v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/spider_chinazy_pocf1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spider_chinazy_pocf2 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="offline_v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stream-bda-data-dev" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stream-bda-data-dev/spider_chinazy_pocf2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spider_chinazy_pocf2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="offline_v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stream-bda-data-dev" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\专高六\IDEAFIle\offline_v2\stream-bda-data-dev\spider_chinazy_pocf2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spider_chinazy_pocf2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="offline_v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\专高六\IDEAFIle\offline_v2\stream-bda-data-dev\spider_chinazy_pocf2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.SocketTextStream" />
+        <item itemvalue="Python.spider_chinazy_pocf2 (1)" />
+        <item itemvalue="Python.spider_chinazy_pocf2 (1)" />
+        <item itemvalue="Python.spider_chinazy_pocf1 (1)" />
+        <item itemvalue="Python.ChromeDebugControllerUtils" />
+        <item itemvalue="Python.lx1" />
       </list>
     </recent_temporary>
   </component>
@@ -113,7 +252,9 @@
       <workItem from="1760966703934" duration="561000" />
       <workItem from="1761028697520" duration="640000" />
       <workItem from="1761058400434" duration="183000" />
-      <workItem from="1761142710143" duration="240000" />
+      <workItem from="1761142710143" duration="1167000" />
+      <workItem from="1761186032823" duration="5407000" />
+      <workItem from="1761191493047" duration="7194000" />
     </task>
     <task id="LOCAL-00001" summary="add init">
       <option name="closed" value="true" />
@@ -171,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761058571373</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add init">
+      <option name="closed" value="true" />
+      <created>1761143008587</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1761143008587</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,5 +341,17 @@
     <MESSAGE value="提交.idea/misc.xml的修改" />
     <MESSAGE value="add init" />
     <option name="LAST_COMMIT_MESSAGE" value="add init" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/offline_v2$spider_chinazy_pocf.coverage" NAME="spider_chinazy_pocf 覆盖结果" MODIFIED="1761188056272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file" />
+    <SUITE FILE_PATH="coverage/offline_v2$ChromeDebugControllerUtils.coverage" NAME="ChromeDebugControllerUtils 覆盖结果" MODIFIED="1761200746662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev/utils" />
+    <SUITE FILE_PATH="coverage/offline_v2$spider_chinazy_pocf1__1_.coverage" NAME="spider_chinazy_pocf1 (1) 覆盖结果" MODIFIED="1761200975446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file" />
+    <SUITE FILE_PATH="coverage/offline_v2$spider_chinazy_pocf2__1_.coverage" NAME="spider_chinazy_pocf2 (1) 覆盖结果" MODIFIED="1761204805308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev" />
+    <SUITE FILE_PATH="coverage/offline_v2$lx1.coverage" NAME="lx1 覆盖结果" MODIFIED="1761200719335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file" />
+    <SUITE FILE_PATH="coverage/offline_v2$spider_chinazy_pocf2.coverage" NAME="spider_chinazy_pocf2 覆盖结果" MODIFIED="1761191278669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file" />
   </component>
 </project>
