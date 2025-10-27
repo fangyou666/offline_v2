@@ -1,24 +1,56 @@
-import logging
-from datetime import datetime
-from DrissionPage import ChromiumPage, ChromiumOptions
+import requests
 
-log_file = f'spider_amap_weather_{datetime.now():%Y%m%d_%H%M%S}.log'
-logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s - %(levelname)s - %(message)s',
-                    handlers=[logging.FileHandler(log_file, encoding='utf-8'),
-                              logging.StreamHandler()])
+cookies = {
+    '__jdv': '76161171|cn.bing.com|-|referral|-|1761143879079',
+    '__jdu': '1761143879078151449299',
+    'areaId': '3',
+    'shshshfpa': '198d99aa-5697-099e-d076-10e720a411af-1761143882',
+    'shshshfpx': '198d99aa-5697-099e-d076-10e720a411af-1761143882',
+    'TrackID': '1b4YB97RJNWyhzbMbZ4hK-WMcGn5vOTyCmYrPydSOD_6STs0eoWraTYtmXZbZ9Zw67Y9VpaubO8WeaDM55dNVk0rvT9rB9_CYYJ4hnguxehoKmTJ15wxXPrtSGI88PtL-',
+    'thor': '5436AA39683983337A70A58A91385C3E37F319B2252E363E2CAD7BB509085F42CB58DBB209E30AF9DB9AD0917DC8159E4E80D1D8265F252BDB31B38E7CA12AB68DB7ABC8FFAF31A5259A93161D0B30A2AE6AE13165870571C63238BFF687C8AA7DD7E5981352E817B9E027C8189074F818C4F9AEB4F3754E136AC3192A5858E186A5381F847841A35B925A54FF3799B101DD81CA8D8846425C0F396CDBFC4194',
+    'light_key': 'AASBKE7rOxgWQziEhC_QY6yaRjBhSof9CYSYdIQ6bNOIoa49lYiB2bGXJhLtHkjWaw8gQq6M',
+    'pinId': 'EksCCK1-cQdFfF9GYPwMYQ',
+    'pin': 'jd_aoIMptwLWkiu',
+    'unick': 'jd_524c40u9o1f527',
+    '_tp': 'afxV180QzmsFTa1ArHBg3g%3D%3D',
+    '_pst': 'jd_aoIMptwLWkiu',
+    'ipLoc-djd': '3-51044-55575-0',
+    'o2State': '',
+    '__jda': '94967808.1761143879078151449299.1761143879.1761143879.1761218520.2',
+    '__jdb': '94967808.1.1761143879078151449299|2.1761218520',
+    '__jdc': '94967808',
+    '3AB9D23F7A4B3CSS': 'jdd037BKTDG37ONOIG6YYEFF4HAGV74I42W5IE67GVSJHN6C5AJCEWIUU7KNSVTE4YXXYMDRYSJBV2RVUNGDFHCBE6ENRFMAAAAM2CDG6K2QAAAAADSSHX5JARLFD4QX',
+    'flash': '3_REz79LpEcHx8hBc9fM-0yZE5XCOcBLuEr0K-hCDbqtFlMq9vU2bSSTPk01CPELyvWskAB7Y6k9fyJhTbbJBJX5j2vxNY4Tb5GGeIS7jIkm_5IvrR6xx-MjQWq50dDMQY_g7ImiGLSQagXPo9xTSAFw6f4_xjVYx8zGAawlmul8CuM1bOqC7X',
+    '3AB9D23F7A4B3C9B': '7BKTDG37ONOIG6YYEFF4HAGV74I42W5IE67GVSJHN6C5AJCEWIUU7KNSVTE4YXXYMDRYSJBV2RVUNGDFHCBE6ENRFM',
+    'cn': '0',
+    'shshshfpb': 'BApXW6GbFE_9Aeze6pNDnKmK_eZCbYqB1BiNVP61p9xJ1PdZfQofZuzf7mDzWBI16Zp7ULqnnDY1klg',
+    'hf_time': '1761236523389',
+    'sdtoken': 'AAbEsBpEIOVjqTAKCQtvQu17RwZkpat75i64JgpXbwWJZZH6QZ5-hF2mrgu5T0erzilh2NHqz5UrEntKyHkOcchrngncT6zgVMYsjeOsaTBbnKjxUaYy0fh-Oe8tIPzJ5DOpmKAhRhjWFOTHChLxpKSo8vc',
+}
 
-# 1. 手动先启 Chrome（管理员 CMD）
-#    "C:\Program Files\Google\Chrome\Application\chrome.exe"
-#     --remote-debugging-port=9222 --user-data-dir=D:\chrome_debug
+headers = {
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+    'Cache-Control': 'no-cache',
+    'Connection': 'keep-alive',
+    'Pragma': 'no-cache',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'none',
+    'Sec-Fetch-User': '?1',
+    'Upgrade-Insecure-Requests': '1',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0',
+    'sec-ch-ua': '"Microsoft Edge";v="141", "Not?A_Brand";v="8", "Chromium";v="141"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    # 'Cookie': '__jdv=76161171|cn.bing.com|-|referral|-|1761143879079; __jdu=1761143879078151449299; areaId=3; shshshfpa=198d99aa-5697-099e-d076-10e720a411af-1761143882; shshshfpx=198d99aa-5697-099e-d076-10e720a411af-1761143882; TrackID=1b4YB97RJNWyhzbMbZ4hK-WMcGn5vOTyCmYrPydSOD_6STs0eoWraTYtmXZbZ9Zw67Y9VpaubO8WeaDM55dNVk0rvT9rB9_CYYJ4hnguxehoKmTJ15wxXPrtSGI88PtL-; thor=5436AA39683983337A70A58A91385C3E37F319B2252E363E2CAD7BB509085F42CB58DBB209E30AF9DB9AD0917DC8159E4E80D1D8265F252BDB31B38E7CA12AB68DB7ABC8FFAF31A5259A93161D0B30A2AE6AE13165870571C63238BFF687C8AA7DD7E5981352E817B9E027C8189074F818C4F9AEB4F3754E136AC3192A5858E186A5381F847841A35B925A54FF3799B101DD81CA8D8846425C0F396CDBFC4194; light_key=AASBKE7rOxgWQziEhC_QY6yaRjBhSof9CYSYdIQ6bNOIoa49lYiB2bGXJhLtHkjWaw8gQq6M; pinId=EksCCK1-cQdFfF9GYPwMYQ; pin=jd_aoIMptwLWkiu; unick=jd_524c40u9o1f527; _tp=afxV180QzmsFTa1ArHBg3g%3D%3D; _pst=jd_aoIMptwLWkiu; ipLoc-djd=3-51044-55575-0; o2State=; __jda=94967808.1761143879078151449299.1761143879.1761143879.1761218520.2; __jdb=94967808.1.1761143879078151449299|2.1761218520; __jdc=94967808; 3AB9D23F7A4B3CSS=jdd037BKTDG37ONOIG6YYEFF4HAGV74I42W5IE67GVSJHN6C5AJCEWIUU7KNSVTE4YXXYMDRYSJBV2RVUNGDFHCBE6ENRFMAAAAM2CDG6K2QAAAAADSSHX5JARLFD4QX; flash=3_REz79LpEcHx8hBc9fM-0yZE5XCOcBLuEr0K-hCDbqtFlMq9vU2bSSTPk01CPELyvWskAB7Y6k9fyJhTbbJBJX5j2vxNY4Tb5GGeIS7jIkm_5IvrR6xx-MjQWq50dDMQY_g7ImiGLSQagXPo9xTSAFw6f4_xjVYx8zGAawlmul8CuM1bOqC7X; 3AB9D23F7A4B3C9B=7BKTDG37ONOIG6YYEFF4HAGV74I42W5IE67GVSJHN6C5AJCEWIUU7KNSVTE4YXXYMDRYSJBV2RVUNGDFHCBE6ENRFM; cn=0; shshshfpb=BApXW6GbFE_9Aeze6pNDnKmK_eZCbYqB1BiNVP61p9xJ1PdZfQofZuzf7mDzWBI16Zp7ULqnnDY1klg; hf_time=1761236523389; sdtoken=AAbEsBpEIOVjqTAKCQtvQu17RwZkpat75i64JgpXbwWJZZH6QZ5-hF2mrgu5T0erzilh2NHqz5UrEntKyHkOcchrngncT6zgVMYsjeOsaTBbnKjxUaYy0fh-Oe8tIPzJ5DOpmKAhRhjWFOTHChLxpKSo8vc',
+}
 
-co = ChromiumOptions()
-co.set_local_port(9222)
-dp = ChromiumPage(addr_or_opts=co)
+response = requests.get('https://mall.jd.com/view_search-2286219.html', cookies=cookies, headers=headers)
 
-try:
-    dp.get('https://www.chinazy.org/zcfg.htm')
-    dp.wait(2)
-    print(dp.html)
-except Exception as e:
-    logging.error('抓取失败', exc_info=True)
+
+# 打印响应状态码
+print("响应状态码：", response.status_code)
+# 打印页面完整HTML内容
+print("页面HTML内容：\n", response.text)
+

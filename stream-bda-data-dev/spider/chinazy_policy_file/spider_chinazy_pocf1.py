@@ -24,4 +24,7 @@ headers = {
 
 response = requests.get('https://www.chinazy.org/zcfg.htm', cookies=cookies, headers=headers)
 
-print(response)
+# 打印响应状态码
+print("响应状态码：", response.status_code)
+# 打印页面完整HTML内容
+print("页面HTML内容：\n", response.text)

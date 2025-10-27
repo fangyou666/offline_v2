@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4906e2a6-0cb3-4bb9-a938-a133633a33b1" name="更改" comment="add init">
-      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/lx1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/spider_chinazy_pocf1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider_chinazy_pocf2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/utils/ChromeDebugControllerUtils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/utils/public_func.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream/1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/utils/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/lx1.py" beforeDir="false" afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/lx1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/spider_chinazy_pocf1.py" beforeDir="false" afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/spider_chinazy_pocf1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream-bda-data-dev/spider_chinazy_pocf2.py" beforeDir="false" afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider_chinazy_pocf2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/stream-bda-data-dev/jd.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +53,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/专高六/IDEAFIle/offline_v2/stream-bda-data-dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/专高六/IDEAFIle/offline_v2/stream-bda-data-dev/utils&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -71,24 +64,30 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\专高六\IDEAFIle\offline_v2\stream-bda-data-dev\utils" />
       <recent name="C:\专高六\IDEAFIle\offline_v2\stream-bda-data-dev" />
       <recent name="C:\专高六\IDEAFIle\offline_v2\sh\10-22" />
       <recent name="C:\专高六\IDEAFIle\offline_v2\sh\10-20" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\专高六\IDEAFIle\offline_v2\stream-bda-data-dev\data_mock" />
       <recent name="C:\专高六\IDEAFIle\offline_v2\stream-bda-data-dev" />
       <recent name="C:\专高六\IDEAFIle\offline_v2\stream-bda-data-dev\spider\chinazy_policy_file" />
       <recent name="C:\专高六\IDEAFIle\offline_v2\stream-bda-data-dev\utils" />
       <recent name="C:\专高六\IDEAFIle\offline_v2\sh\10-22" />
-      <recent name="C:\专高六\IDEAFIle\offline_v2\sh\10-20" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.spider_chinazy_pocf2 (1)">
-    <configuration name="ChromeDebugControllerUtils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.jd">
+    <configuration name="jd" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="offline_v2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -96,12 +95,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stream-bda-data-dev/utils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stream-bda-data-dev" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stream-bda-data-dev/utils/ChromeDebugControllerUtils.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stream-bda-data-dev/jd.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -222,11 +221,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.spider_chinazy_pocf2 (1)" />
+        <item itemvalue="Python.jd" />
         <item itemvalue="Python.spider_chinazy_pocf2 (1)" />
         <item itemvalue="Python.spider_chinazy_pocf1 (1)" />
-        <item itemvalue="Python.ChromeDebugControllerUtils" />
         <item itemvalue="Python.lx1" />
+        <item itemvalue="Python.spider_chinazy_pocf2 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +253,12 @@
       <workItem from="1761058400434" duration="183000" />
       <workItem from="1761142710143" duration="1167000" />
       <workItem from="1761186032823" duration="5407000" />
-      <workItem from="1761191493047" duration="7194000" />
+      <workItem from="1761191493047" duration="17141000" />
+      <workItem from="1761264858382" duration="1402000" />
+      <workItem from="1761275601995" duration="672000" />
+      <workItem from="1761287458984" duration="810000" />
+      <workItem from="1761289227852" duration="2746000" />
+      <workItem from="1761363170716" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="add init">
       <option name="closed" value="true" />
@@ -320,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761143008587</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add init">
+      <option name="closed" value="true" />
+      <created>1761204936790</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1761204936790</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,9 +361,10 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/offline_v2$spider_chinazy_pocf.coverage" NAME="spider_chinazy_pocf 覆盖结果" MODIFIED="1761188056272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file" />
     <SUITE FILE_PATH="coverage/offline_v2$ChromeDebugControllerUtils.coverage" NAME="ChromeDebugControllerUtils 覆盖结果" MODIFIED="1761200746662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev/utils" />
-    <SUITE FILE_PATH="coverage/offline_v2$spider_chinazy_pocf1__1_.coverage" NAME="spider_chinazy_pocf1 (1) 覆盖结果" MODIFIED="1761200975446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file" />
-    <SUITE FILE_PATH="coverage/offline_v2$spider_chinazy_pocf2__1_.coverage" NAME="spider_chinazy_pocf2 (1) 覆盖结果" MODIFIED="1761204805308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev" />
-    <SUITE FILE_PATH="coverage/offline_v2$lx1.coverage" NAME="lx1 覆盖结果" MODIFIED="1761200719335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file" />
+    <SUITE FILE_PATH="coverage/offline_v2$spider_chinazy_pocf1__1_.coverage" NAME="spider_chinazy_pocf1 (1) 覆盖结果" MODIFIED="1761227234469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file" />
+    <SUITE FILE_PATH="coverage/offline_v2$spider_chinazy_pocf2__1_.coverage" NAME="spider_chinazy_pocf2 (1) 覆盖结果" MODIFIED="1761227301066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev" />
+    <SUITE FILE_PATH="coverage/offline_v2$lx1.coverage" NAME="lx1 覆盖结果" MODIFIED="1761219066902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file" />
+    <SUITE FILE_PATH="coverage/offline_v2$jd.coverage" NAME="jd 覆盖结果" MODIFIED="1761229702481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev" />
     <SUITE FILE_PATH="coverage/offline_v2$spider_chinazy_pocf2.coverage" NAME="spider_chinazy_pocf2 覆盖结果" MODIFIED="1761191278669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file" />
   </component>
 </project>
