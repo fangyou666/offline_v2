@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4906e2a6-0cb3-4bb9-a938-a133633a33b1" name="更改" comment="add init">
-      <change afterPath="$PROJECT_DIR$/stream-bda-data-dev/utils/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/lx1.py" beforeDir="false" afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/lx1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/spider_chinazy_pocf1.py" beforeDir="false" afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider/chinazy_policy_file/spider_chinazy_pocf1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream-bda-data-dev/spider_chinazy_pocf2.py" beforeDir="false" afterPath="$PROJECT_DIR$/stream-bda-data-dev/spider_chinazy_pocf2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stream/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/stream-bda-data-dev/jd.py" afterDir="false" />
-    </list>
+    <list default="true" id="4906e2a6-0cb3-4bb9-a938-a133633a33b1" name="更改" comment="add init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -259,6 +252,7 @@
       <workItem from="1761287458984" duration="810000" />
       <workItem from="1761289227852" duration="2746000" />
       <workItem from="1761363170716" duration="3000" />
+      <workItem from="1761574579289" duration="187000" />
     </task>
     <task id="LOCAL-00001" summary="add init">
       <option name="closed" value="true" />
@@ -332,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761204936790</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add init">
+      <option name="closed" value="true" />
+      <created>1761574716335</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1761574716335</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
